@@ -1,62 +1,161 @@
-# LegalEase: Your AI Legal Assistant ⚖️
+⚖️ LEGALEASE — SMART LEGAL DOCUMENT ASSISTANT
 
-LegalEase is an intelligent, multilingual web application designed to help users understand complex legal documents. By leveraging powerful AI models, it can extract text, translate, summarize, and provide critical insights into any uploaded document, making legal information more accessible and transparent.
+LegalEase is an AI-powered legal document analysis system designed to make complex legal content easy to understand, accessible, and actionable.
 
-## Try it here: https://legaleaseforindia.streamlit.app/
+It helps users analyze legal documents such as contracts, agreements, policies, and scanned PDFs by extracting text, summarizing content, identifying key clauses, and highlighting potential risks.
 
----
+--------------------------------------------------
 
-## ✨ Key Features
+📌 OVERVIEW
 
--   **Multi-Format Document Upload:** Seamlessly upload and process documents in both **PDF** and **Image** formats (`.png`, `.jpg`, `.jpeg`).
--   **Advanced OCR:** Automatically extracts text from documents using Tesseract, with a robust two-pass system for high accuracy.
--   **Smart Language Auto-Detection:** Intelligently identifies the source language of the document after cleaning the extracted text.
--   **Automatic Background Analysis:**
-    -   **Summarization:** Instantly generates a concise summary in your chosen output language as soon as a document is uploaded.
-    -   **Risk Assessment:** Proactively scans for signs of fraud or authenticity issues and displays a prominent warning for high-risk documents.
-    -   **Key Insights:** Automatically extracts crucial information like the entities involved, signature requirements, and the consequences of signing (or not signing).
--   **Multilingual AI Suite:**
-    -   **Translate:** Translate the entire document into a wide range of global languages.
-    -   **Summarize:** Get a summary in your desired language, regardless of the document's original language.
-    -   **Interactive Q&A:** Ask questions about the document and get answers in your chosen language. The AI will answer from the document if possible, or from its general knowledge if the information isn't present.
+Legal documents are often long, complex, and difficult for non-legal professionals to understand.
 
----
+LegalEase simplifies this process by using:
+- Optical Character Recognition (OCR)
+- Intelligent text processing
+- AI-powered summarization
+- Multilingual translation
+- Interactive question answering
 
-## 🛠️ Tech Stack
+The system is suitable for students, professionals, startups, and individuals who need quick legal insights without deep legal expertise.
 
--   **Frontend:** [Streamlit](https://streamlit.io/)
--   **Backend & Logic:** [Python](https://www.python.org/)
--   **AI & LLM:** [Groq API](https://groq.com/) (running Llama 3.1)
--   **OCR Engine:** [Tesseract](https://github.com/tesseract-ocr/tesseract) (`pytesseract`)
--   **Language Detection:** `langdetect`
--   **PDF Processing:** `pdf2image` & Poppler
+--------------------------------------------------
 
----
+✨ KEY FEATURES
 
-## 🚀 Getting Started
+📄 DOCUMENT PROCESSING
+- Upload legal documents in PDF or image format
+- Extract text from scanned documents using OCR
+- Clean and preprocess extracted text automatically
 
-Follow these steps to set up and run LegalEase on your local machine.
+🧠 AI-POWERED ANALYSIS
+- Generate concise legal summaries
+- Extract important clauses and information
+- Identify risks and authenticity indicators
+- Ask questions directly about the uploaded document
 
-### 1. Prerequisites
+🌍 MULTILINGUAL SUPPORT
+- Detect document language automatically
+- Translate documents into preferred languages
+- Generate summaries in selected languages
 
-You must have the Tesseract OCR engine and the Poppler utility installed on your system.
+🚀 USER EXPERIENCE
+- Simple and intuitive interface
+- Fast processing and results
+- Clear and readable outputs
 
--   **Windows:**
-    -   **Tesseract:** Download and run the installer from the [Tesseract at UB Mannheim](https://github.com/UB-Mannheim/tesseract/wiki) page. **Important:** During setup, ensure you install the scripts for the languages you need (e.g., Devanagari, Gurmukhi). Add the installation folder (e.g., `C:\Program Files\Tesseract-OCR`) to your system's PATH.
-    -   **Poppler:** Download the latest binary zip file from [this link](https://github.com/oschwartz10612/poppler-windows/releases/). Extract it and add its `\Library\bin` subfolder to your system's PATH.
+--------------------------------------------------
 
--   **macOS / Linux:** Use a package manager like Homebrew or apt.
-    ```bash
-    # macOS with Homebrew
-    brew install tesseract tesseract-lang poppler
+🛠 TECHNOLOGIES USED
 
-    # Linux (Ubuntu/Debian)
-    sudo apt-get install tesseract-ocr tesseract-ocr-all poppler-utils
-    ```
+- 🐍 Python
+- 🌐 Streamlit (Web Interface)
+- 📄 Tesseract OCR
+- 📑 PDF Processing Tools
+- 🤖 AI Language Models
+- 🌍 Language Detection & Translation Libraries
 
-### 2. Clone the Repository
+--------------------------------------------------
 
-Clone this repository to your local machine:
-```bash
-git clone [https://github.com/ShivamKhunger/LegalEase.git](https://github.com/ShivamKhunger/LegalEase.git)
-cd legalease-app
+⚙ HOW IT WORKS
+
+1. User uploads a legal document
+2. OCR extracts readable text from the document
+3. Text is cleaned and processed
+4. AI analyzes the content
+5. Summaries, insights, and risks are generated
+6. User can ask document-specific questions
+
+--------------------------------------------------
+
+📁 PROJECT STRUCTURE
+
+LegalEase/
+- app.py            (Main application file)
+- ocr_module.py     (OCR and text extraction logic)
+- ai_module.py      (Summarization and Q&A logic)
+- utils.py          (Language detection and helpers)
+- requirements.txt  (Python dependencies)
+- README.md         (Documentation)
+
+--------------------------------------------------
+
+⚙ INSTALLATION
+
+PREREQUISITES
+- Python 3.8 or higher
+- pip package manager
+- Tesseract OCR installed
+- PDF processing utilities installed
+
+SETUP STEPS
+
+git clone https://github.com/022RaTiNdRa/LegalEase.git
+cd LegalEase
+pip install -r requirements.txt
+
+--------------------------------------------------
+
+▶ USAGE
+
+Start the application:
+
+streamlit run app.py
+
+After starting, open your browser and go to:
+
+http://localhost:8501
+
+You can:
+- Upload legal PDFs or images
+- View extracted text
+- Read AI-generated summaries
+- Identify key clauses and risks
+- Ask questions about the document
+
+--------------------------------------------------
+
+📈 USE CASES
+
+- 📜 Contract review and summarization
+- ⚖️ Legal agreement analysis
+- 🏛 Government policy understanding
+- 🧾 Scanned legal document interpretation
+- ❓ Legal document Q&A assistance
+
+--------------------------------------------------
+
+🔮 FUTURE ENHANCEMENTS
+
+- 🔐 User authentication and document history
+- ☁ Cloud storage integration
+- 📊 Legal analytics dashboard
+- 🔔 Notification and alert system
+- 👩‍⚖️ Expert legal review integration
+
+--------------------------------------------------
+
+🤝 CONTRIBUTING
+
+Contributions are welcome.
+
+Steps:
+1. Fork the repository
+2. Create a new feature branch
+3. Commit your changes
+4. Push to your branch
+5. Open a Pull Request
+
+--------------------------------------------------
+
+📜 LICENSE
+
+This project is licensed under the MIT License.
+
+--------------------------------------------------
+
+📬 CONTACT
+
+For issues, feature requests, or suggestions, open an issue on GitHub.
+
+⭐ If you find this project helpful, consider starring the repository!
